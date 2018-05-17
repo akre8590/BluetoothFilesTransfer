@@ -4,26 +4,29 @@
     android:gravity="center_horizontal"
     android:orientation="vertical">
 
+
     <TextView
         android:id="@+id/textView_FileName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="50dp"
-        android:text="Seleccione el archivo"
+        android:text="Transferir via:"
         android:textSize="18sp" />
     <Button
         android:layout_marginTop="30dp"
-        android:id="@+id/button_GetFile"
+        android:id="@+id/button_viaBluetooth"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:onClick="getFile"
-        android:text="Explorar" />
-    <Button
+        android:onClick="viaBluetooth"
+        android:text="Bluetooth" />
 
-        android:id="@+id/button_SendFile"
+    <Button
+        android:id="@+id/button_viaWifi"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:onClick="sendViaBluetooth"
-        android:text="Enviar via Bluetooth" />
+        android:onClick="viaWifi"
+        android:text="Wifi" />
+
 
 </LinearLayout>
+
