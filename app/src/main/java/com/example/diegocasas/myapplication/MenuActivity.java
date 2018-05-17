@@ -38,5 +38,7 @@ public class MenuActivity extends AppCompatActivity {
 
     public void openWifiSettings() {
         startActivity(new Intent(Settings.ACTION_WIFI_SETTINGS));
+        /*Intent intent = new Intent(Settings.ACTION_WIFI_SETTINGS);
+        startActivity(intent);*/
     }
 }
