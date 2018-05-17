@@ -2,6 +2,7 @@ package com.example.diegocasas.myapplication;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.provider.Settings;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -9,7 +10,6 @@ import android.widget.Button;
 
 public class MenuActivity extends AppCompatActivity {
     private Button buttonBluetooth;
-
 
 
     @Override
@@ -25,15 +25,18 @@ public class MenuActivity extends AppCompatActivity {
             }
         });
     }
+
     public void openActivityBluetooht() {
         Intent intent = new Intent(this, MainActivity.class);
         startActivity(intent);
     }
-    public void viaWifi(View view){
-            openActivityWifi();
+
+    public void viaWifi(View view) {
+        openWifiSettings();
     }
-    public void openActivityWifi() {
-        Intent intent = new Intent (this, WifiActivity.class);
-        startActivity(intent);
+
+
+    public void openWifiSettings() {
+        startActivity(new Intent(Settings.ACTION_WIFI_SETTINGS));
     }
 }

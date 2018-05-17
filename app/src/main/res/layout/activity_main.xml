@@ -11,19 +11,26 @@
         android:layout_marginTop="50dp"
         android:text="Seleccione el archivo"
         android:textSize="18sp" />
-    <Button
+    <Button style="@style/Widget.AppCompat.Button.Colored"
         android:layout_marginTop="30dp"
         android:id="@+id/button_GetFile"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:onClick="getFile"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
         android:text="Explorar" />
-    <Button
 
+    <Button style="@style/Widget.AppCompat.Button.Colored"
+        android:layout_marginTop="10dp"
         android:id="@+id/button_SendFile"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:onClick="sendViaBluetooth"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
         android:text="Enviar via Bluetooth" />
+
+
 
 </LinearLayout>
