@@ -30,12 +30,9 @@ public class MenuActivity extends AppCompatActivity {
         Intent intent = new Intent(this, MainActivity.class);
         startActivity(intent);
     }
-
     public void viaWifi(View view) {
         openWifiSettings();
     }
-
-
     public void openWifiSettings() {
         startActivity(new Intent(Settings.ACTION_WIFI_SETTINGS));
         /*Intent intent = new Intent(Settings.ACTION_WIFI_SETTINGS);
