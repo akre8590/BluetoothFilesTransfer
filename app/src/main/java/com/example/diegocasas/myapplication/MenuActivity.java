@@ -16,11 +16,12 @@ public class MenuActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_menu);
-        buttonBluetooth = (Button) findViewById(R.id.button_viaBluetooth);
 
+        buttonBluetooth = (Button) findViewById(R.id.button_viaBluetooth);
         buttonBluetooth.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
                 openActivityBluetooht();
             }
         });
@@ -31,11 +32,9 @@ public class MenuActivity extends AppCompatActivity {
         startActivity(intent);
     }
     public void viaWifi(View view) {
-        openWifiSettings();
+
+        Intent intent = new Intent(this, WifiActivity.class);
+        startActivity(intent);
     }
-    public void openWifiSettings() {
-        startActivity(new Intent(Settings.ACTION_WIFI_SETTINGS));
-        /*Intent intent = new Intent(Settings.ACTION_WIFI_SETTINGS);
-        startActivity(intent);*/
-    }
+
 }

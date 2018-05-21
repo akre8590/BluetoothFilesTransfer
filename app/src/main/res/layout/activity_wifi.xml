@@ -1,15 +1,37 @@
-<?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".WifiActivity">
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
 
     <TextView
+        android:id="@+id/textView_FileName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Actividad de wifi"
-        />
+        android:layout_marginTop="50dp"
+        android:text="Conectarse a red WI-FI:"
+        android:textSize="18sp" />
 
-</android.support.constraint.ConstraintLayout>
+    <Button style="@style/Widget.AppCompat.Button.Colored"
+        android:layout_marginTop="30dp"
+        android:id="@+id/scanWifi"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="RedesWifi"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
+        android:text="Redes WI-FI" />
+
+    <Button style="@style/Widget.AppCompat.Button.Colored"
+        android:layout_marginTop="10dp"
+        android:id="@+id/sendWifi"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="enviarWIFI"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
+        android:text="Enviar" />
+
+
+</LinearLayout>
