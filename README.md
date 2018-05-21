@@ -1,3 +1,3 @@
 # BluetoothFilesTransfer
 
-Files transfer via Bluetooth - Any files  - Android Studio
+Files transfer via Bluetooth and WIFI- Any files  - Android Studio
