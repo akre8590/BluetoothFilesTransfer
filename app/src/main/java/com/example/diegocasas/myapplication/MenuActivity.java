@@ -26,15 +26,12 @@ public class MenuActivity extends AppCompatActivity {
             }
         });
     }
-
     public void openActivityBluetooht() {
         Intent intent = new Intent(this, MainActivity.class);
         startActivity(intent);
     }
     public void viaWifi(View view) {
-
         Intent intent = new Intent(this, WifiActivity.class);
         startActivity(intent);
     }
-
 }

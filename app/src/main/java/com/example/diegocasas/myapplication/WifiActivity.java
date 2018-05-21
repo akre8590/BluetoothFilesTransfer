@@ -42,9 +42,9 @@ public class WifiActivity extends AppCompatActivity {
         ConnectivityManager connectivityManager = (ConnectivityManager)getSystemService(Context.CONNECTIVITY_SERVICE);
         NetworkInfo networkInfo = connectivityManager.getNetworkInfo(ConnectivityManager.TYPE_WIFI);
         if (networkInfo.isConnected()){
-            Toast.makeText(this, "Listo para enviar via WIFI", Toast.LENGTH_LONG).show();
+            Toast.makeText(this, "Listo para enviar via WI-FI", Toast.LENGTH_SHORT).show();
         } else{
-            Toast.makeText(this,"Por favor conectate primero a una red WI-FI", Toast.LENGTH_LONG).show();
+            Toast.makeText(this,"Por favor conectate a una red WI-FI", Toast.LENGTH_SHORT).show();
         }
 
     }
