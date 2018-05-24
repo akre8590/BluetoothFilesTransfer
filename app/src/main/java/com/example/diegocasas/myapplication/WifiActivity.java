@@ -22,7 +22,6 @@ public class WifiActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_wifi);
 
-
         buttonWifi = (Button)findViewById(R.id.scanWifi);
         buttonWifi.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -31,13 +30,13 @@ public class WifiActivity extends AppCompatActivity {
             }
         });
     }
-
     public void openWifiSettings() {
+        WifiManager wifi = (WifiManager) getApplicationContext().getSystemService(Context.WIFI_SERVICE);
+        wifi.setWifiEnabled(true);
         startActivity(new Intent(Settings.ACTION_WIFI_SETTINGS));
         /*Intent intent = new Intent(Settings.ACTION_WIFI_SETTINGS);
         startActivity(intent);*/
     }
-
     public void enviarWIFI(View view){
         ConnectivityManager connectivityManager = (ConnectivityManager)getSystemService(Context.CONNECTIVITY_SERVICE);
         NetworkInfo networkInfo = connectivityManager.getNetworkInfo(ConnectivityManager.TYPE_WIFI);
@@ -46,6 +45,5 @@ public class WifiActivity extends AppCompatActivity {
         } else{
             Toast.makeText(this,"Por favor conectate a una red WI-FI", Toast.LENGTH_SHORT).show();
         }
-
     }
 }
