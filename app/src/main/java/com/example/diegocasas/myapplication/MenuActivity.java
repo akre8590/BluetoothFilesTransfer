@@ -34,4 +34,6 @@ public class MenuActivity extends AppCompatActivity {
         Intent intent = new Intent(this, WifiActivity.class);
         startActivity(intent);
     }
+
+
 }

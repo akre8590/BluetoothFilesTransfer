@@ -95,7 +95,6 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-
     public void sendViaBluetooth(View v) {
         if (path == null) {
             Toast.makeText(this, "Por favor seleccione el archivo primero", Toast.LENGTH_SHORT).show();
@@ -159,8 +158,7 @@ public class MainActivity extends AppCompatActivity {
                     startActivity(Intent.createChooser(intent, getResources().getText(R.string.send_to)));
                 }
             }
-        } else if (requestCode == 1001
-                && resultCode == Activity.RESULT_OK) {
+        } else if (requestCode == 1001 && resultCode == Activity.RESULT_OK) {
             Uri uriPath = data.getData();
             Log.d("", "Video URI= " + uriPath);
 
@@ -169,8 +167,7 @@ public class MainActivity extends AppCompatActivity {
             textView_FileName.setText(path);
 
         } else {
-            Toast.makeText(this, "Bluetooth ha sido cancelado", Toast.LENGTH_LONG)
-                    .show();
+            Toast.makeText(this, "Bluetooth ha sido cancelado", Toast.LENGTH_LONG).show();
         }
     }
 
